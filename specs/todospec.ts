@@ -9,7 +9,7 @@ describe('Protractor Demo App', function() {
       browser.get('http://juliemr.github.io/protractor-demo/');
     });
   
-    xit('should have a title', function() {
+    it('should have a title', function() {
       expect<any>(browser.getTitle()).toEqual('Super Calculator');
     });
   
@@ -21,14 +21,14 @@ describe('Protractor Demo App', function() {
       expect<any>(latestResult.getText()).toEqual(String(result));
     });
   
-    xit('should add four and six', function() {
+    it('should add four and six', function() {
       firstNumber.sendKeys(4);
       secondNumber.sendKeys(6);
       goButton.click();
       expect<any>(latestResult.getText()).toEqual('10');
     });
   
-    xit('should read the value from an input', function() {
+    it('should read the value from an input', function() {
       firstNumber.sendKeys(1);
       expect<any>(firstNumber.getAttribute('value')).toEqual('1');
     });
