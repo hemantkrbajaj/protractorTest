@@ -1,28 +1,28 @@
 import {element,$,by, browser} from 'protractor'
 export class LoginPage {
-    public HomeButton = element(by.css(".btn.home"))
-    public CustomerLoginButtn = element(by.css("button[ng-click='customer()']"))
-    public BankManagerLoginButton = element(by.css("button[ng-click='manager()']"))
-    public Header = element(by.css(".mainHeading"))
+    public static HomeButton = element(by.css(".btn.home"))
+    public static CustomerLoginButtn = element(by.css("button[ng-click='customer()']"))
+    public static BankManagerLoginButton = element(by.css("button[ng-click='manager()']"))
+    public static Header = element(by.css(".mainHeading"))
     baseurl:string
 
     public constructor(baseURL:string){
         this.baseurl=baseURL
         browser.get(this.baseurl)
     }
-     public getHeaderText():any{
+     public static getHeaderText():any{
         return this.Header.getText()
     }
 
-    public clickHome():void{
+    public static clickHome():void{
         this.HomeButton.click()
     }
 
-    public clickCustomerLogin():void{
+    public static clickCustomerLogin():void{
         this.CustomerLoginButtn.click()
     }
 
-    public clickBankManager():void{
+    public static clickBankManager():void{
         this.BankManagerLoginButton.click()
     }
 }
