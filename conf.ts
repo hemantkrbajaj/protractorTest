@@ -10,7 +10,7 @@ exports.config = {
       includeStackTrace: true,
       defaultTimeoutInterval: 400000
   },
-    specs: ['./specs/todospec.js'],
+    specs: ['./specs/LoginScreenSpec.js'],
     capabilities: {
       browserName: 'chrome'
     },
@@ -27,5 +27,11 @@ exports.config = {
         number2:4
       }
 
-    }
+    },
+    environment:{
+      ci:{
+        baseUrl: "http://www.way2automation.com/angularjs-protractor/banking/#/login"
+      }
+    },
+    baseUrl: "http://www.way2automation.com/angularjs-protractor/banking/#/login"
   }
