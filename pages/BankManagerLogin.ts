@@ -12,11 +12,19 @@ export class BankManagerLogin{
             return this.OpenAccount.isDisplayed()
     }
 
-    public static isCustomerButtonDisplayed(selectUser:string):void{
-            this.CustomersButton.sendKeys("var_args")
+    public static isCustomerButtonDisplayed():any{
+            return this.CustomersButton.isDisplayed()
     }
 
     public static clickAddCustomerButton():void{
             this.AddCustomerButton.click()
+    }
+
+    public static clickOpenAccount():void{
+            this.OpenAccount.click()
+    }
+
+    public static clickCustomers():void{
+            this.CustomersButton.click()
     }
 }
