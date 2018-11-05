@@ -25,7 +25,7 @@ describe("Landing page Test scripts", function(){
 
     it("Validate that User can click on Customer Login Button and User should be at Customer Page",function(){
             LoginPage.clickCustomerLogin()
-            expect<any>(CustomerLogin.isUserListPresent()).toBeTruthy()
+            expect<any>(CustomerLogin.isCustomerListPresent()).toBeTruthy()
     })
     it("Validate that User can click on Bank Manager Login Button and User should be at Manager Page",function(){
         LoginPage.clickBankManager()

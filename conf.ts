@@ -10,7 +10,7 @@ exports.config = {
       includeStackTrace: true,
       defaultTimeoutInterval: 400000
   },
-    specs: ['./specs/LoginScreenSpec.js'],
+    specs: ['./specs/*.js'],
     capabilities: {
       browserName: 'chrome'
     },
