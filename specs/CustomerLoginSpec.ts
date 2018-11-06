@@ -2,6 +2,7 @@ import { browser } from "protractor";
 import { LoginPage } from "../pages/LoginPage";
 import { CustomerLogin } from "../pages/CustomerLogin";
 import {CustomerPage} from "../pages/CustomerPage"
+import { CommonObjects } from "../Utilities/CommonObjects";
 
 describe("Customer Login Page specs", function(){
     beforeEach(function(){
@@ -11,7 +12,7 @@ describe("Customer Login Page specs", function(){
 
     it("Validate UI Elements",function(){
         expect<any>(CustomerLogin.isCustomerListPresent()).toBeTruthy()
-        expect<any>(CustomerLogin.getLabelText()).toEqual("Your Name :")
+        expect<any>(CustomerLogin.getLabelText()).toEqual(["Your Name :"])
         expect<any>(CustomerLogin.isLoginButtonPresent()).not.toBeTruthy()
     })
 
@@ -27,6 +28,6 @@ describe("Customer Login Page specs", function(){
     })
 
     it("Is Ron Weasly present",function(){
-        expect<any>(CustomerLogin.Customer("Ron Weasly").isPresent()).toBeTruthy()
+        expect<any>(CommonObjects.DropDown("Ron Weasly").isPresent()).toBeTruthy()
     })
 })

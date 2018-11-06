@@ -1,9 +1,9 @@
 import {element,by} from 'protractor'
+import { CommonObjects } from '../Utilities/CommonObjects';
 export class CustomerLogin{
     public static CustomerList = element(by.model("custId"))
-    public static LoginButton = element(by.css("button[type='submit']"))
-    public static Label = element(by.css("label"))
-    public static Customer(customerName:string):any{return element(by.cssContainingText("option",`${customerName}`))}
+    public static LoginButton = CommonObjects.SubmitButton
+    public static Label = CommonObjects.Labels
 
     public static isCustomerListPresent():any{
             return this.CustomerList.isDisplayed()
@@ -14,7 +14,7 @@ export class CustomerLogin{
     }
 
     public static selectCustomer(selectCustomer:string):void{
-        this.Customer(selectCustomer).click()
+        CommonObjects.DropDown(selectCustomer).click()
     }
 
     public static clickLoginButton():void{
