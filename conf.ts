@@ -1,4 +1,5 @@
 import { browser } from "protractor";
+import { platform } from "os";
 
 var HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
 var jasmineReporters = require('jasmine-reporters');
@@ -64,14 +65,15 @@ exports.config = {
 
           var HTMLReport = require('protractor-html-reporter-2');
           var testConfig = {
-              reportTitle: 'Protractor Test Execution Report',
+              reportTitle: 'Test Execution Report',
               outputPath: dashboardReportDirectory,
               outputFilename: 'index',
               screenshotPath: './',
               testBrowser: browserName,
               browserVersion: browserVersion,
               modifiedSuiteName: false,
-              screenshotsOnlyOnFailure: true
+              screenshotsOnlyOnFailure: true,
+              testPlatform:platform
           };
           new HTMLReport().from(reportsDirectory + '/xml/xmlOutput.xml', testConfig);
       });
