@@ -13,4 +13,8 @@ describe("Customers specs",function(){
     it("Verify Delete funcitonality",function(){
             Customers.deleteCustomer("Albus")
     })
+
+    it("find customer",function(){
+        expect<any>(Customers.findCustomer("Harry")).toEqual(jasmine.arrayContaining(["Harry"]))
+    })
 })

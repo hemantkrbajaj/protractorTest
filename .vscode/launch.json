@@ -8,9 +8,15 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceRoot}/node_modules/protractor/bin/protractor",
-            "args": ["${workspaceRoot}/protractorConfig.js"]
-        }
+            "name": "Protractor Test",
+            "program": "C:/Users/hemant.bajaj/AppData/Roaming/npm/node_modules/protractor/bin/protractor",
+            "args": ["${workspaceRoot}/CompiledFiles/conf.js"]},
+            {
+                "type": "node",
+                "request": "attach",
+                "name": "Protractor Test",
+                "address": "localhost",
+                "port": 5858
+            }
     ]
 }
