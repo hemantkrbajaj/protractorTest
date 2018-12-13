@@ -76,6 +76,7 @@ exports.config = {
               testPlatform:platform
           };
           new HTMLReport().from(reportsDirectory + '/xml/xmlOutput.xml', testConfig);
+          console.log("Test report generated at: "+dashboardReportDirectory+"/index.html");
       });
   },
     //onCleanup: () => void;
